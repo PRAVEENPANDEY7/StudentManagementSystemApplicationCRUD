@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Student Management Dashboard</h1>
+    </header>
+
+    <section class="form-section">
+        <h2 id="form-title">Add Student</h2>
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="course" placeholder="Course">
+        <button type="button" id="addBtn" onclick="addOrUpdateStudent()">Add Student</button>
+    </section>
+
+    <section class="table-section">
+        <h2>Students List</h2>
+        <!-- Search bar -->
+        <input type="text" id="searchInput" placeholder="Search by ID, Name or Course" onkeyup="searchStudent()" class="search-bar">
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody id="studentTable">
+            <!-- Rows will be injected here -->
+            </tbody>
+        </table>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
